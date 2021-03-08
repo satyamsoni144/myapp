@@ -1,7 +1,9 @@
-FROM ubuntu 
-MAINTAINER satyamsoni144@gmail.com
+FROM ubuntu:trusty
 
-RUN apt-get update 
+#Update and install stuff
+RUN apt-get update
 RUN apt-get install nginx -y
-CMD [“echo”,”Image created”] 
+
+
 EXPOSE 80
+CMD /usr/sbin/nginx -g "daemon off;"
